@@ -1,5 +1,6 @@
 # Mr. Snippy
 # Author: Larry Donahue
+# Edited: Bobby Eleveld
 # This program aims to trim long-term coherence data collected by CoherenceGrab.py. This reduces file sizes and eliminates insignificant coherences below a certain threshold.
 # This program is intended for use on the LIGO clusters, and lives there.
 # This program is dedicated to former MLB pitcher, Randy Johnson, and his slider, Mr. Snappy.
