@@ -1,5 +1,6 @@
 # Plot Renamer
 # Author: Larry Donahue
+# Edited: Bobby Eleveld
 # This program shortens the name of fscan plot files for ease of use for the Linefinder Interface located at https://github.com/donahuel/linefinder-interface.
 
 import os
