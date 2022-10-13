@@ -40,7 +40,7 @@ def renameDirs(rootdir):
 
         return dircount
 
-rootdir = "/home/larry.donahue/plots" #Define root directory in which thigns will be renamed
+rootdir = "/home/robertminghui.elevld/plots" #Define root directory in which thigns will be renamed
 print("Plot Renamer opened. Beginning renaming.")
 numfiles = renameFiles()
 print("Renamed " + str(numfiles) + " coherence plot files.")
