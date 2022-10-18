@@ -10,6 +10,7 @@ import subprocess
 def scrape(dType, frame):
         #Define root directory to scrape data from by timeframe:
         rootdir = "/home/pulsar/public_html/fscan/H1/" + frame + "/H1Fscan_coherence/H1Fscan_coherence"
+        fType = ""
         
         #put scraped files in different directories depending on type of files scraped (plots/text files)
         if dType == ".png":
