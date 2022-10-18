@@ -14,9 +14,9 @@ def scrape(dType, frame):
         
         #put scraped files in different directories depending on type of files scraped (plots/text files)
         if dType == ".png":
-                fType == "plots"
+                fType = "plots"
         elif dType == ".txt":
-                fType == "data"
+                fType = "data"
         else: 
                 print("Invalid Data Type")
         
