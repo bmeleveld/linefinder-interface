@@ -10,7 +10,7 @@ import subprocess
 
 def snip():
         #Define root directory to snip data from
-        rootdir = "/home/robert.minghui/data/H1"
+        rootdir = "/home/robertminghui.elevelddata/H1"
 
         #Counting variables
         storedlines = 0
