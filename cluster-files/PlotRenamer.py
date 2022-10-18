@@ -43,8 +43,8 @@ def renameDirs(rootdir):
 
 rootdir = "/home/robertminghui.elevld/plots" #Define root directory in which thigns will be renamed
 print("Plot Renamer opened. Beginning renaming.")
-numfiles = renameFiles()
+numfiles = renameFiles(rootdir)
 print("Renamed " + str(numfiles) + " coherence plot files.")
 print("Beginning directory renaming.")
-numdirs = renameDirs()
+numdirs = renameDirs(rootdir)
 print("Renamed " + str(numdirs) + " plot directories.")
