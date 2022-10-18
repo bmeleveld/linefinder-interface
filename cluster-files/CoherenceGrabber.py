@@ -10,7 +10,15 @@ import subprocess
 def scrape(dType, frame):
         #Define root directory to scrape data from by timeframe:
         rootdir = "/home/pulsar/public_html/fscan/H1/" + frame + "/H1Fscan_coherence/H1Fscan_coherence"
-
+        
+        #put scraped files in different directories depending on type of files scraped (plots/text files)
+        if dType = ".png"
+                fType = "plots"
+        elif dType = ".txt"
+                fType = "data"
+        else: 
+                print("Invalid Data Type")
+        
         #List of files that will eventually be pushed to new directory:
         filecount = 0
 
@@ -24,17 +32,17 @@ def scrape(dType, frame):
                 else:
                         #Creates directory within data folder for certain weeks
                         if subdir.split("/")[9] != "comparisonFscans": #This check eliminates an empty comparisonFscans directory
-                                subprocess.call(["mkdir", "-p", "/home/robertminghui.eleveld/data/" + frame + "/" + subdir.split("/")[9]])
+                                subprocess.call(["mkdir", "-p", "/home/robertminghui.eleveld/" + fType + "/" + frame + "/" + subdir.split("/")[9]])
                         for file in files:
                                 #If statement here filters out all files we know don't contain coherence data we want.
                                 #A note: The gravitational wave channel (H1_GDS-CALIB_STRAIN) contains none of these files, so we can run this program through it with little cost.
                                 if len(subdir.split("/")) >= 11: #Check to prevent bounds error on our split lists
                                         if subdir.split("/")[10] != "H1_GDS-CALIB_STRAIN":
                                                 #Creates directory within weekly directory for certain channels
-                                                subprocess.call(["mkdir", "-p", "/home/robertminghui.eleveld/data/" + frame + "/" + subdir.split("/")[9] + "/" + subdir.split("/")[10]])
+                                                subprocess.call(["mkdir", "-p", "/home/robertminghui.eleveld/" + fType + "/" + frame + "/" + subdir.split("/")[9] + "/" + subdir.split("/")[10]])
                                         if file.endswith(dType) and file.split("_")[4] == "coherence": #The plot and text files have identical names with the exception of their ending.
                                                 #Copies file to appropriate directory
-                                                subprocess.call(["rsync", os.path.join(subdir,file), "/home/robertminghui.eleveld/data/" + frame + "/" + subdir.split("/")[9] + "/" + subdir.split("/")[10]])
+                                                subprocess.call(["rsync", os.path.join(subdir,file), "/home/robertminghui.eleveld/" + fType + "/" + frame + "/" + subdir.split("/")[9] + "/" + subdir.split("/")[10]])
                                                 filecount = filecount + 1
         return filecount
 
