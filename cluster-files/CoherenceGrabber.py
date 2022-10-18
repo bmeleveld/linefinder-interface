@@ -12,10 +12,10 @@ def scrape(dType, frame):
         rootdir = "/home/pulsar/public_html/fscan/H1/" + frame + "/H1Fscan_coherence/H1Fscan_coherence"
         
         #put scraped files in different directories depending on type of files scraped (plots/text files)
-        if dType = ".png"
-                fType = "plots"
-        elif dType = ".txt"
-                fType = "data"
+        if dType == ".png"
+                fType == "plots"
+        elif dType == ".txt"
+                fType == "data"
         else: 
                 print("Invalid Data Type")
         
