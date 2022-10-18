@@ -36,7 +36,7 @@ def renameDirs(rootdir):
                 if subdirparts[-1].split("_")[0] == "fscans": #We only want to rename the fscans_... directories.
                         newname = "plots_" + subdirparts[-1].split("_")[1] + "_" + subdirparts[-1].split("_")[2] + "_" + subdirparts[-1].split("_")[3] #Generate new name
                         subprocess.call(["mv", subdir, "/" + subdirparts[1] + "/" + subdirparts[2] + "/" + subdirparts[3] + "/" + subdirparts[4] + "/" + subdirparts[5] + "/" + newname) #Carry out the renaming
-                print("Directory " + subdirparts[-1] + " renamed to " + newname)
+                print("Directory " + subdirparts[-1] + " renamed to " + newname])
                 dircount = dircount + 1
 
         return dircount
